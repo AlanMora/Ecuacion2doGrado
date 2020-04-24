@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+	<h2 align="center">Formula chicharronera</h2>
+	<form th:action="@{/index}" th:object="${datos}" method="post">
+	<div style="text-align:center;">
+		<table border="1" bgcolor="#EFFBFB" style="margin: 0 auto;">
+			<tbody>
+				<tr>
+					<td>La solucion se obtiene con la siguiente formula</td>
+				<tr />
+				
+					<td><img th:src="@{/completa.png}" width="250" height="100"></img></td>
+				<tr />
+				<tr>
+					<td>Ingresa los datos</td>
+				<tr />
+
+				<tr>
+					<td>a: <input type="number" th:field="*{a}" /></td>
+				</tr>
+				<tr>
+					<td>b: <input type="number" th:field="*{b}" /></td>
+				</tr>
+				<tr>
+					<td>c:<input type="number" th:field="*{c}" /></td>
+				</tr>
+				<tr>
+					<td><input
+						type="submit" value="Resolver" /></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</form>
+</body>
+</html>
